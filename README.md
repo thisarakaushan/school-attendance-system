@@ -46,24 +46,22 @@ school-management-system/
 
 ### API Endpoints:
 - User Authentication & Roles
-    - api/login → implemented with Sanctum.
-    - api/logout → implemented.
-    - Roles (admin and teacher) are defined.
-    - Students do not need login per assignment — correct.
+    - api/login → login api
+    - api/logout → logout api.
 
 - User Management (Admin only)
-    - api/register-student → implemented.
-    - api/register-teacher → implemented.
-    - api/students → list students. (Admin & Teacher)
-    - api/teachers → list teachers.
+    - api/register-student → Register student api
+    - api/register-teacher → Register teacher api
+    - api/students → List students (Admin & Teacher)
+    - api/teachers → List teachers
 
 - Attendance Module (Teacher only)
-    - api/students-by-class/{class} → fetch students for a class.
-    - api/mark-attendance → mark attendance, prevents duplicates for the day.
+    - api/students-by-class/{class} → Api to fetch students for a class
+    - api/mark-attendance → Api to mark attendance, prevents duplicates for the day.
 
 - Basic Reporting (Admin & Teacher)
-    - api/student-report/{student_id} → student report with summary.
-    - api/class-report/{class_grade}/{month} → Class report with summary.
+    - api/student-report/{student_id} → Api to get student report with summary.
+    - api/class-report/{class_grade}/{month} → Api for getting class report with summary.
 
 ## How to Run the Project
 
@@ -204,35 +202,44 @@ Frontend runs at: http://localhost:3000
 ### Test Login Credentials
 
 Admin
-Email: admin@school.com
+Email: admin@example.com
 Password: password123
 
 Teacher
-Email: teacher@school.com
+Email: teacher@example.com
 Password: teach123
 
-✅ Admin logs in → Registers students & teachers → Views reports
-✅ Teacher logs in → Selects class → Marks attendance → Views class/student reports
+- Admin logs in → Registers students & teachers → Views reports
+
+- Teacher logs in → Selects class → Marks attendance → Views class/student reports
 
 ## UI Screenshots
 
 ### Database (MySQL):
 ![Database structure](<Screenshot 2025-09-05 105437.png>)
 
+
 ### Login:
 ![Login Page](<Screenshot 2025-09-05 104638.png>)
+
 
 ### Admin
 - Admin dashboard:
 ![Admin dashboard](<Screenshot 2025-09-05 104738.png>)
 
+
 - Register Student:
 ![Register Student UI](<Screenshot 2025-09-05 104828.png>)
+
 ![Registered Student](<Screenshot 2025-09-05 104859.png>)
+
+
 
 - Register Teacher:
 ![Register Teacher UI](<Screenshot 2025-09-05 104942.png>)
+
 ![Registered Teacher](<Screenshot 2025-09-05 105048.png>)
+
 
 - List of students & teachers:
 ![List](<Screenshot 2025-09-05 105018.png>)
@@ -243,14 +250,20 @@ Password: teach123
 - Teacher dashboard:
 ![Teacher dashboard](<Screenshot 2025-09-05 104305.png>)
 
+
 - List of students and mark attendance view:
 ![List of students](<Screenshot 2025-09-05 104404.png>)
 
+
 - Reports view:
 ![Reports view UI](<Screenshot 2025-09-05 104417.png>)
+
 ![Individual Student Report-1](<Screenshot 2025-09-05 104447.png>)
+
 ![Individual Student Report-2](<Screenshot 2025-09-05 104508.png>)
+
 ![Class Report](<Screenshot 2025-09-05 104535.png>)
+
 ![Full Report view](<Screenshot 2025-09-05 104602.png>)
 
 ### Bonus Features
